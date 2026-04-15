@@ -18,3 +18,20 @@ Retype new password:
 passwd: password updated successfully
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
+wsl --list --verbose
+  NAME              STATE           VERSION
+* docker-desktop    Running         2
+  Ubuntu            Stopped         2
+
+wsl --list --online
+无法从“https://raw.githubusercontent.com/microsoft/WSL/master/distributions/DistributionInfo.json”提取列表分发。操作超时
+错误代码: Wsl/WININET_E_TIMEOUT
+
+WSL integration with distro 'Ubuntu' unexpectedly stopped. Do you want to restart it?
+
+running wsl distro proxy in Ubuntu distro: running proxy: running wslexec: An error occurred while running the command. DockerDesktop/Wsl/ExecError: c:\windows\system32\wsl.exe -d ubuntu -u root -e /mnt/wsl/docker-desktop/docker-desktop-user-distro proxy --distro-name ubuntu --docker-desktop-root /mnt/wsl/docker-desktop c:\program files\docker\docker\resources: exit status 1 (stderr: , stdout: , wslErrorCode: DockerDesktop/Wsl/ExecError) (output: <3>WSL (612 - Relay) ERROR: CreateProcessCommon:800: execvpe(/mnt/wsl/docker-desktop/docker-desktop-user-distro) failed: Permission denied) (wslConf: [boot]
+systemd=true
+
+[user]
+default=
+)

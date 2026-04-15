@@ -1,10 +1,15 @@
 ```shell
 wsl --install
-wsl --set-default-version 2
-
-wsl --list --verbose
 
 wsl --install -d Ubuntu
+wsl --install -d Debian
+
+wsl --list --verbose
+wsl --set-default-version 2
+wsl --list --online
+
+wsl --set-default Ubuntu
+bash
 
 wsl --import <发行版名称> <安装目录> <镜像文件路径>
 wsl --import Ubuntu-24.04 "D:\WSL\Ubuntu-24.04" "E:\Edge Download\ubuntu-24.04.2-wsl-amd64.tar"
