@@ -18,6 +18,8 @@ wsl --import Ubuntu E:\WSL\Ubuntu E:\WSL\Ubuntu.tar --version 2
 del E:\WSL\Ubuntu.tar
 wsl -d Ubuntu
 
+winget install Anthropic.ClaudeCode
+
 bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 nvm install 20
