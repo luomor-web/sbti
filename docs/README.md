@@ -29,6 +29,7 @@ npm config set registry https://registry.npmmirror.com
 完成seo优化
 
 重构页面，美化页面，seo优化​
+更新README.md，增加agent.md供AI阅读
 
 winget --version
 git --version
