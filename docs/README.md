@@ -24,6 +24,7 @@ nvm install 20
 npm config set registry https://registry.npmmirror.com
 
 开发一个sbti人格测试网站
+完成seo优化
 
 winget --version
 git --version
