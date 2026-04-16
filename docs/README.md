@@ -24,6 +24,22 @@ bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 nvm install 20
 npm config set registry https://registry.npmmirror.com
+npm install -g @anthropic-ai/claude-code
+export HTTP_PROXY="http://192.168.6.105:8118"
+export HTTPS_PROXY="http://192.168.6.105:8118"
+claude
+/theme
+
+sudo cp /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list.d/ubuntu.sources.bak
+sudo vim /etc/apt/sources.list.d/ubuntu.sources
+Types: deb
+URIs: http://mirrors.aliyun.com/ubuntu/
+Suites: noble noble-updates noble-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+sudo apt update
+
 
 开发一个sbti人格测试网站
 完成seo优化
