@@ -1,865 +1,342 @@
-<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SBTi 企业气候目标成熟度评估 - 科学碳目标倡议工具</title>
-  <meta name="description" content="基于SBTi框架的免费企业气候目标成熟度评估工具，帮助企业评估气候行动、减排路径和目标设定的准备程度。包含20道专业问题，5分钟完成评估。">
-  <meta name="keywords" content="SBTi, 科学碳目标, 企业气候评估, 碳排放核算, 减排目标, ESG, 气候行动, 温室气体, 净零目标">
-  <meta name="author" content="清华大学实验室">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="SBTi 企业气候目标成熟度评估">
-  <meta property="og:description" content="免费在线评估工具，帮助企业了解在SBTi科学碳目标倡议中的准备程度。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.luomor.com/sbti">
-  <meta property="og:image" content="https://www.luomor.com/sbti/sbti.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SBTi 企业气候目标成熟度评估">
-  <meta name="twitter:description" content="基于SBTi框架的免费企业气候评估工具">
-  <meta name="twitter:image" content="https://www.luomor.com/sbti/sbti.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "SBTi 企业气候目标成熟度评估",
-    "description": "基于SBTi框架的免费在线评估工具，帮助企业评估气候行动准备程度",
-    "url": "https://www.luomor.com/sbti",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web Browser",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "CNY"
-    },
-    "creator": {
-      "@type": "Organization",
-      "name": "烙馍网",
-      "email": "1097692918@qq.com",
-      "url": "https://github.com/zhangchunsheng"
-    }
-  }
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6096731848877113" crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3PX4SD5VDY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3PX4SD5VDY');
-  </script>
-  <!-- Baidu Analytics -->
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?12a0d13963b589e9095ccecdd327f3fa";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-  <style>
-    :root {
-      --color-background-primary: #ffffff;
-      --color-background-secondary: #f8f9fa;
-      --color-background-info: #e6f1fb;
-      --color-text-primary: #212529;
-      --color-text-secondary: #6c757d;
-      --color-text-tertiary: #adb5bd;
-      --color-border-tertiary: #dee2e6;
-      --color-border-secondary: #ced4da;
-      --border-radius-lg: 12px;
-      --border-radius-md: 8px;
-      --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
-      --transition: all 0.3s ease;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBTI 人格测试 | 基于大五人格理论的性格分析工具</title>
+    <meta name="description" content="免费在线SBTI人格测试，基于大五人格理论，帮助你了解开放性、责任心、外向性、宜人性和神经质五大维度。10分钟完成测试，获得个性化性格分析报告。">
+    <meta name="keywords" content="SBTI, 人格测试, 大五人格, 性格测试, 心理测试, 开放性, 责任心, 外向性, 宜人性, 神经质, 性格分析, 学生测试">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.luomor.com/sbti/v1/index.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.luomor.com/sbti/v1/index.html">
+    <meta property="og:title" content="SBTI 人格测试 | 基于大五人格理论的性格分析工具">
+    <meta property="og:description" content="免费在线SBTI人格测试，基于大五人格理论，帮助你了解开放性、责任心、外向性、宜人性和神经质五大维度。10分钟完成测试，获得个性化性格分析报告。">
+    <meta property="og:image" content="https://picsum.photos/id/1005/600/400">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.luomor.com/sbti/v1/index.html">
+    <meta property="twitter:title" content="SBTI 人格测试 | 基于大五人格理论的性格分析工具">
+    <meta property="twitter:description" content="免费在线SBTI人格测试，基于大五人格理论，帮助你了解开放性、责任心、外向性、宜人性和神经质五大维度。10分钟完成测试，获得个性化性格分析报告。">
+    <meta property="twitter:image" content="https://picsum.photos/id/1005/600/400">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6096731848877113" crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3PX4SD5VDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Noto Sans SC', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      color: var(--color-text-primary);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    .sbti-wrap {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-      background: var(--color-background-primary);
-      border-radius: var(--border-radius-lg);
-      box-shadow: var(--shadow-md);
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
-    header.hero {
-      text-align: center;
-      padding: 3rem 0 2.5rem;
-      border-bottom: 1px solid var(--color-border-tertiary);
-      margin-bottom: 2.5rem;
-      background: linear-gradient(135deg, var(--color-background-primary) 0%, var(--color-background-secondary) 100%);
-      border-radius: var(--border-radius-lg);
-      margin: -2rem -1.5rem 2.5rem;
-      padding: 4rem 2rem 3rem;
-    }
-    .hero-badge {
-      display: inline-block;
-      font-size: 12px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #185FA5;
-      background: var(--color-background-info);
-      border-radius: 25px;
-      padding: 6px 16px;
-      margin-bottom: 1.5rem;
-      font-weight: 500;
-      box-shadow: var(--shadow-sm);
-    }
-    .hero h1 {
-      font-family: 'Noto Serif SC', serif;
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--color-text-primary);
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    }
-    .hero p {
-      font-size: 16px;
-      color: var(--color-text-secondary);
-      line-height: 1.7;
-      max-width: 600px;
-      margin: 0 auto;
-      font-weight: 400;
-    }
-    main {
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    .progress-bar-wrap {
-      margin-bottom: 2.5rem;
-      background: var(--color-background-secondary);
-      padding: 1.5rem;
-      border-radius: var(--border-radius-md);
-      box-shadow: var(--shadow-sm);
-    }
-    .progress-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-    .progress-label {
-      font-size: 14px;
-      color: var(--color-text-secondary);
-      font-weight: 500;
-    }
-    .progress-track {
-      height: 6px;
-      background: var(--color-background-primary);
-      border-radius: 3px;
-      overflow: hidden;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-    }
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #185FA5 0%, #0F6E56 100%);
-      border-radius: 3px;
-      transition: var(--transition);
-    }
-    .category-tag {
-      display: inline-block;
-      font-size: 12px;
-      padding: 4px 12px;
-      border-radius: 20px;
-      background: var(--color-background-secondary);
-      color: var(--color-text-secondary);
-      margin-bottom: 1.5rem;
-      border: 1px solid var(--color-border-tertiary);
-      font-weight: 500;
-    }
-    .question-card {
-      background: var(--color-background-primary);
-      border: 1px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
-    }
-    .question-card:hover {
-      box-shadow: var(--shadow-md), 0 0 0 2px rgba(24, 95, 165, 0.1);
-    }
-    .question-num {
-      font-size: 12px;
-      color: var(--color-text-tertiary);
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .question-text {
-      font-size: 18px;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .option-btn {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 18px;
-      border: 1px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-md);
-      background: transparent;
-      cursor: pointer;
-      text-align: left;
-      font-family: 'Noto Sans SC', sans-serif;
-      font-size: 14px;
-      color: var(--color-text-primary);
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-    .option-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(24, 95, 165, 0.1), transparent);
-      transition: left 0.5s;
-    }
-    .option-btn:hover::before {
-      left: 100%;
-    }
-    .option-btn:hover {
-      background: var(--color-background-secondary);
-      border-color: var(--color-border-secondary);
-      transform: translateY(-1px);
-    }
-    .option-btn.selected {
-      border-color: #185FA5;
-      background: #E6F1FB;
-      color: #185FA5;
-      box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.1);
-    }
-    .option-circle {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      border: 2px solid var(--color-border-secondary);
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: var(--transition);
-    }
-    .option-btn.selected .option-circle {
-      background: #185FA5;
-      border-color: #185FA5;
-    }
-    .option-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: white;
-      display: none;
-    }
-    .option-btn.selected .option-dot {
-      display: block;
-    }
-    .nav-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 2rem;
-    }
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid var(--color-border-secondary);
-      border-radius: var(--border-radius-md);
-      padding: 12px 24px;
-      font-size: 14px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: var(--color-text-secondary);
-      cursor: pointer;
-      transition: var(--transition);
-      font-weight: 500;
-    }
-    .btn-ghost:hover {
-      background: var(--color-background-secondary);
-      transform: translateY(-1px);
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #185FA5 0%, #0F6E56 100%);
-      border: none;
-      border-radius: var(--border-radius-md);
-      padding: 12px 28px;
-      font-size: 14px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: white;
-      cursor: pointer;
-      transition: var(--transition);
-      font-weight: 500;
-      box-shadow: var(--shadow-sm);
-    }
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #0C447C 0%, #0A4F3D 100%);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-md);
-    }
-    .btn-primary:disabled {
-      background: var(--color-background-secondary);
-      color: var(--color-text-tertiary);
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
-    }
-    .result-wrap {
-      text-align: center;
-      padding: 3rem 0;
-    }
-    .score-ring {
-      width: 140px;
-      height: 140px;
-      margin: 0 auto 2rem;
-      position: relative;
-    }
-    .score-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--color-text-primary);
-    }
-    .score-label-sm {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-    }
-    .result-title {
-      font-family: 'Noto Serif SC', serif;
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--color-text-primary);
-    }
-    .result-subtitle {
-      font-size: 16px;
-      color: var(--color-text-secondary);
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .dim-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 2.5rem;
-    }
-    .dim-card {
-      background: var(--color-background-secondary);
-      border-radius: var(--border-radius-md);
-      padding: 1.25rem;
-      text-align: left;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-    }
-    .dim-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    .dim-name {
-      font-size: 14px;
-      color: var(--color-text-secondary);
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-    .dim-bar-track {
-      height: 8px;
-      background: var(--color-background-primary);
-      border-radius: 4px;
-      margin-bottom: 8px;
-      overflow: hidden;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-    }
-    .dim-bar-fill {
-      height: 100%;
-      border-radius: 4px;
-      transition: width 1s ease;
-    }
-    .dim-score {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--color-text-primary);
-    }
-    .recommend-box {
-      background: var(--color-background-primary);
-      border: 1px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 1.5rem 2rem;
-      text-align: left;
-      margin-bottom: 3rem;
-      box-shadow: var(--shadow-md);
-    }
-    .recommend-box h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--color-text-primary);
-    }
-    .rec-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--color-border-tertiary);
-      transition: var(--transition);
-    }
-    .rec-item:hover {
-      background: var(--color-background-secondary);
-      padding-left: 8px;
-      padding-right: 8px;
-      margin-left: -8px;
-      margin-right: -8px;
-      border-radius: var(--border-radius-md);
-    }
-    .rec-item:last-child {
-      border-bottom: none;
-    }
-    .rec-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
-      background: var(--color-background-info);
-      color: var(--color-text-info);
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-      font-weight: 600;
-    }
-    .rec-text {
-      font-size: 14px;
-      color: var(--color-text-secondary);
-      line-height: 1.6;
-    }
-    .rec-text strong {
-      color: var(--color-text-primary);
-      font-weight: 600;
-    }
-    .start-wrap {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
-      margin: 2rem 0 2.5rem;
-    }
-    .info-card {
-      background: var(--color-background-secondary);
-      border-radius: var(--border-radius-md);
-      padding: 1.25rem;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-    }
-    .info-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    .info-card .num {
-      font-size: 24px;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: 4px;
-    }
-    .info-card .lbl {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      margin-top: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 2.5rem;
-    }
-    .tag {
-      font-size: 12px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid var(--color-border-tertiary);
-      color: var(--color-text-secondary);
-      font-weight: 500;
-      transition: var(--transition);
-    }
-    .tag:hover {
-      background: var(--color-background-secondary);
-      transform: scale(1.05);
-    }
+  gtag('config', 'G-3PX4SD5VDY');
+</script>
 
-    /* 响应式设计 */
-    @media (max-width: 768px) {
-      .sbti-wrap {
-        margin: 1rem;
-        padding: 1.5rem;
-        border-radius: var(--border-radius-md);
-      }
-      header.hero {
-        margin: -1.5rem -1.5rem 2rem;
-        padding: 3rem 1.5rem 2rem;
-      }
-      .hero h1 {
-        font-size: 26px;
-      }
-      .hero p {
-        font-size: 14px;
-      }
-      .question-card {
-        padding: 1.5rem;
-      }
-      .question-text {
-        font-size: 16px;
-      }
-      .dim-grid {
-        grid-template-columns: 1fr;
-      }
-      .info-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .nav-row {
-        flex-direction: column;
-        gap: 12px;
-      }
-      .btn-ghost, .btn-primary {
-        width: 100%;
-      }
-      .result-wrap {
-        padding: 2rem 0;
-      }
-      .score-ring {
-        width: 120px;
-        height: 120px;
-      }
-      .score-text {
-        font-size: 28px;
-      }
-      .result-title {
-        font-size: 20px;
-      }
-      .recommend-box {
-        padding: 1.25rem 1.5rem;
-      }
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?12a0d13963b589e9095ccecdd327f3fa";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "SBTI 人格测试",
+        "description": "免费在线SBTI人格测试，基于大五人格理论，帮助你了解开放性、责任心、外向性、宜人性和神经质五大维度。10分钟完成测试，获得个性化性格分析报告。",
+        "url": "https://www.luomor.com/sbti/v1/index.html",
+        "mainEntity": {
+            "@type": "AssessmentTool",
+            "name": "SBTI 人格测试",
+            "description": "基于大五人格理论开发的在线性格测试工具",
+            "applicationCategory": "心理测试",
+            "operatingSystem": "Web浏览器",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "CNY"
+            },
+            "featureList": [
+                "开放性评估",
+                "责任心评估", 
+                "外向性评估",
+                "宜人性评估",
+                "神经质评估"
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "烙馍网",
+            "email": "1097692918@qq.com",
+            "url": "https://github.com/zhangchunsheng"
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "大五人格理论",
+            "description": "心理学中的人格模型，包括开放性、责任心、外向性、宜人性和神经质五个维度"
+        }
     }
-
-    /* 动画 */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-in {
-      animation: fadeIn 0.6s ease forwards;
-    }
-
-    /* 加载动画 */
-    .loading {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 3px solid rgba(255,255,255,.3);
-      border-radius: 50%;
-      border-top-color: #fff;
-      animation: spin 1s ease-in-out infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    /* Footer 样式 */
-    footer {
-      text-align: center;
-      background-color: #2d3748;
-      color: white;
-      padding: 3rem 0;
-      margin-top: 2rem;
-    }
-    footer .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    footer .border-t {
-      border-top: 1px solid #4a5568;
-      margin-top: 2rem;
-      padding-top: 2rem;
-      color: #a0aec0;
-    }
-    footer a {
-      color: #a0aec0;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: white;
-    }
-  </style>
+    </script>
 </head>
 <body>
-  <div class="sbti-wrap fade-in">
-    <header class="hero">
-      <div class="hero-badge">SBTi 科学碳目标倡议</div>
-      <h1>企业气候目标成熟度评估</h1>
-      <p>基于 SBTi 框架，评估贵公司在气候行动、减排路径和目标设定方面的准备程度。通过专业的20道问题，快速了解您的企业气候治理水平。</p>
-    </header>
-
-    <main>
-      <section id="start-screen">
-        <div class="start-wrap">
-          <div class="info-grid">
-            <div class="info-card">
-              <div class="num">20</div>
-              <div class="lbl">专业评估题目</div>
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-lightbulb-o text-indigo-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">SBTI 人格测试</span>
             </div>
-            <div class="info-card">
-              <div class="num">5</div>
-              <div class="lbl">核心评估维度</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium">首页</a>
+                <a href="test.html" class="text-gray-600 hover:text-indigo-600 font-medium">开始测试</a>
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 font-medium">关于测试</a>
+                <a href="contact.html" class="text-gray-600 hover:text-indigo-600 font-medium">联系我们</a>
             </div>
-            <div class="info-card">
-              <div class="num">~8min</div>
-              <div class="lbl">预计完成时长</div>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-indigo-600">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
             </div>
-          </div>
-          <div class="tag-list">
-            <span class="tag">治理架构</span>
-            <span class="tag">温室气体核算</span>
-            <span class="tag">目标设定</span>
-            <span class="tag">减排行动</span>
-            <span class="tag">信息披露</span>
-          </div>
-          <div style="text-align:center">
-            <button class="btn-primary" onclick="startQuiz()" style="padding: 14px 48px; font-size: 16px;">开始免费评估</button>
-          </div>
         </div>
-      </section>
+    </nav>
 
-      <section id="quiz-screen" style="display:none">
-        <div class="progress-bar-wrap">
-          <div class="progress-header">
-            <span class="progress-label" id="progress-label">第 1 题，共 20 题</span>
-            <span class="progress-label" id="progress-pct">0%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" id="progress-fill" style="width:0%"></div>
-          </div>
+    <!-- 英雄区域 -->
+    <section class="hero-section pt-20">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        了解你的人格特质<br>
+                        <span class="text-yellow-300">发现更好的自己</span>
+                    </h1>
+                    <p class="text-lg text-white/90 mb-8">
+                        SBTI 人格测试基于大五人格理论，帮助你深入了解自己的性格特点，为个人成长和职业规划提供参考。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="test.html" class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 shadow-lg">
+                            开始测试
+                        </a>
+                        <a href="#about" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition duration-300">
+                            了解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/1005/600/400" alt="SBTI人格测试首页插图，展示性格分析和自我认知的概念" class="rounded-lg shadow-2xl w-full">
+                </div>
+            </div>
         </div>
-        <div class="question-card">
-          <div class="category-tag" id="q-category"></div>
-          <div class="question-num" id="q-num"></div>
-          <div class="question-text" id="q-text"></div>
-          <div class="options" id="q-options"></div>
+    </section>
+
+    <!-- 关于测试 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">关于 SBTI 测试</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    SBTI (Student's Big Five Traits Inventory) 是基于大五人格理论开发的测试工具，专为学生群体设计。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">科学依据</h3>
+                    <p class="text-gray-600">
+                        基于大五人格理论，经过专业心理学家验证，测试结果具有较高的信度和效度。
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">快速便捷</h3>
+                    <p class="text-gray-600">
+                        只需10分钟即可完成测试，即时获得详细的人格分析报告。
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">个性化报告</h3>
+                    <p class="text-gray-600">
+                        根据你的回答生成个性化的人格分析报告，帮助你更好地了解自己。
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="nav-row">
-          <button class="btn-ghost" id="btn-prev" onclick="prevQ()">← 上一题</button>
-          <button class="btn-primary" id="btn-next" onclick="nextQ()" disabled>下一题 →</button>
+    </section>
+
+    <!-- 测试维度 -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">测试维度</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    SBTI 测试从五个维度评估你的人格特质
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-lightbulb-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">开放性</h3>
+                    <p class="text-gray-600 text-sm">
+                        对新经验、新思想的接受程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-check-circle text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">责任心</h3>
+                    <p class="text-gray-600 text-sm">
+                        组织性、可靠性和自律程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">外向性</h3>
+                    <p class="text-gray-600 text-sm">
+                        社交能力、活力和积极情绪
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">宜人性</h3>
+                    <p class="text-gray-600 text-sm">
+                        友善、合作和同理心程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">神经质</h3>
+                    <p class="text-gray-600 text-sm">
+                        情绪稳定性和压力反应
+                    </p>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section id="result-screen" style="display:none"></section>
-    </main>
-  </div>
-  <footer class="bg-gray-800 text-white py-12">
-    <div class="container mx-auto px-4">
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2026 @烙馍网 保留所有权利.</p> <a id="bei-an" href="https://beian.miit.gov.cn/" target="_blank">京ICP备16044936号-1</a>
+    <!-- 行动号召 -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">准备好了解自己了吗？</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                开始 SBTI 人格测试，发现你的独特人格特质，为个人成长和职业规划提供参考。
+            </p>
+            <a href="test.html" class="bg-white text-indigo-600 font-bold py-4 px-8 rounded-lg hover:bg-indigo-50 transition duration-300 shadow-lg text-lg">
+                开始测试
+            </a>
         </div>
-    </div>
-  </footer>
-  <script>
-    // 问题数据保持不变
-    const questions = [
-      { cat: "治理架构", text: "贵公司是否在董事会层面设有专门负责气候/ESG议题的委员会或职位？", opts: ["是，设有独立委员会且有明确授权", "是，但职责较为分散或非正式", "正在筹备建立中", "目前尚未建立"], scores: [4,3,2,1] },
-      { cat: "治理架构", text: "气候相关目标是否与高管薪酬激励机制挂钩？", opts: ["是，已明确量化并与绩效强挂钩", "部分挂钩，指标较模糊", "正在研究设计中", "尚未建立连接"], scores: [4,3,2,1] },
-      { cat: "治理架构", text: "贵公司是否制定了正式的气候变化应对政策文件？", opts: ["是，已公开发布且定期更新", "有内部政策文件但未公开", "草案阶段，尚未正式发布", "暂无相关政策文件"], scores: [4,3,2,1] },
-      { cat: "治理架构", text: "气候风险是否被纳入公司整体风险管理框架？", opts: ["是，参照TCFD框架全面整合", "部分纳入，缺乏系统化", "正在开展差距分析", "尚未整合"], scores: [4,3,2,1] },
-      { cat: "温室气体核算", text: "贵公司是否开展了完整的温室气体盘查（范围1、2、3）？", opts: ["是，覆盖全部三个范围，经过第三方验证", "已完成范围1和2，范围3部分覆盖", "仅完成范围1和2", "尚未开展系统性盘查"], scores: [4,3,2,1] },
-      { cat: "温室气体核算", text: "贵公司采用何种温室气体核算标准？", opts: ["GHG Protocol企业标准（含范围2指南）", "行业特定标准或地方标准", "自行制定的内部方法", "尚无明确核算标准"], scores: [4,3,2,1] },
-      { cat: "温室气体核算", text: "贵公司供应链（范围3）温室气体数据的覆盖程度如何？", opts: ["覆盖15个以上范围3类别，数据质量高", "覆盖主要类别（占比>40%）", "仅覆盖1-2个关键类别", "尚未启动范围3核算"], scores: [4,3,2,1] },
-      { cat: "目标设定", text: "贵公司是否已提交或承诺提交SBTi目标？", opts: ["已获SBTi官方批准的科学碳目标", "已提交SBTi审核中", "已签署承诺函（Commitment Letter）", "尚未开始SBTi申请流程"], scores: [4,3,2,1] },
-      { cat: "目标设定", text: "贵公司近期减排目标（2030年前）对应哪种减排路径？", opts: ["1.5°C路径（年均减排4.2%以上）", "2°C路径（年均减排2.5%以上）", "有量化目标但路径未明确", "仅有定性承诺，无量化目标"], scores: [4,3,2,1] },
-      { cat: "目标设定", text: "贵公司是否设定了长期净零目标？", opts: ["2050年前实现净零，含明确的中间里程碑", "有净零承诺但路径不清晰", "正在制定中", "尚未设定净零目标"], scores: [4,3,2,1] },
-      { cat: "目标设定", text: "贵公司目标是否覆盖供应链减排？", opts: ["范围3目标覆盖67%以上采购和使用排放", "有范围3目标但覆盖率不足67%", "正在评估和制定中", "目标仅涵盖范围1和2"], scores: [4,3,2,1] },
-      { cat: "减排行动", text: "贵公司在可再生能源使用方面的进展如何？", opts: ["可再生能源占比已超80%，或已签署RE100", "可再生能源占比30%-80%", "已启动可再生能源项目（占比<30%）", "尚未系统推进可再生能源转型"], scores: [4,3,2,1] },
-      { cat: "减排行动", text: "贵公司是否制定了详细的减排行动计划（含预算和时间表）？", opts: ["有全面的行动计划，已纳入年度预算", "有初步计划，资源配置尚不明确", "正在开展减排路径规划", "尚无系统性减排行动计划"], scores: [4,3,2,1] },
-      { cat: "减排行动", text: "贵公司如何处理无法直接减排的剩余碳排放？", opts: ["优先内部减排，仅对剩余量使用高质量碳移除", "使用碳信用额度但质量参差", "主要依赖碳信用抵消而非实质减排", "尚未制定相关策略"], scores: [4,3,2,1] },
-      { cat: "减排行动", text: "贵公司是否向供应商传导气候行动要求？", opts: ["已向主要供应商提出明确的减排要求及时间节点", "正在开展供应商能力建设和意识提升", "偶尔在采购评估中涉及气候因素", "供应商管理中尚未纳入气候要求"], scores: [4,3,2,1] },
-      { cat: "信息披露", text: "贵公司以何种方式披露气候相关信息？", opts: ["年度TCFD报告+CDP披露+ESG报告，经第三方鉴证", "发布ESG报告，部分参照TCFD框架", "仅有基础的可持续发展信息披露", "尚无系统性气候信息披露"], scores: [4,3,2,1] },
-      { cat: "信息披露", text: "贵公司温室气体数据是否经过第三方鉴证？", opts: ["是，经有资质机构有限保证或合理保证鉴证", "正在安排首次第三方鉴证", "仅进行内部审核", "尚未开展任何形式的鉴证"], scores: [4,3,2,1] },
-      { cat: "信息披露", text: "贵公司是否披露了气候相关的财务风险和机遇？", opts: ["按TCFD框架全面披露，含情景分析", "定性描述了主要气候风险", "仅提及气候相关的合规风险", "暂未披露气候财务影响"], scores: [4,3,2,1] },
-      { cat: "信息披露", text: "贵公司是否定期追踪并公开报告目标达成进展？", opts: ["每年公开发布带有数据对比的进展报告", "内部定期追踪，对外披露有限", "有追踪机制但报告频率不固定", "尚未建立系统性进展追踪机制"], scores: [4,3,2,1] },
-      { cat: "信息披露", text: "贵公司气候目标和行动是否与国家/行业减排路径保持一致？", opts: ["明确对标国家NDC或行业SBT路径", "参考了主要国际气候协议", "一致性分析仍在进行中", "尚未评估一致性"], scores: [4,3,2,1] }
-    ];
+    </section>
 
-    const catColors = { "治理架构": "#185FA5", "温室气体核算": "#0F6E56", "目标设定": "#993C1D", "减排行动": "#3B6D11", "信息披露": "#854F0B" };
-    const catBg = { "治理架构": "#E6F1FB", "温室气体核算": "#E1F5EE", "目标设定": "#FAECE7", "减排行动": "#EAF3DE", "信息披露": "#FAEEDA" };
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-lightbulb-o text-indigo-400 text-2xl"></i>
+                        <span class="text-xl font-bold">SBTI 人格测试</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        帮助学生了解自己的人格特质，为个人成长和职业规划提供参考。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/zhangchunsheng" class="text-gray-400 hover:text-white">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="test.html" class="text-gray-400 hover:text-white">开始测试</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">关于测试</a></li>
+                        <li><a href="contact.html#contact" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div id="contact">
+                    <h3 class="text-lg font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="fa fa-envelope text-indigo-400"></i>
+                            <span class="text-gray-400">1097692918@qq.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fa fa-map-marker text-indigo-400"></i>
+                            <span class="text-gray-400">烙馍网</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 @烙馍网 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
 
-    let current = 0;
-    let answers = new Array(20).fill(null);
-
-    function startQuiz() {
-      document.getElementById('start-screen').style.display = 'none';
-      document.getElementById('quiz-screen').style.display = 'block';
-      renderQ();
-    }
-
-    function renderQ() {
-      const q = questions[current];
-      const categoryEl = document.getElementById('q-category');
-      categoryEl.textContent = q.cat;
-      categoryEl.style.background = catBg[q.cat];
-      categoryEl.style.color = catColors[q.cat];
-      categoryEl.style.borderColor = catColors[q.cat] + '44';
-      document.getElementById('q-num').textContent = '第 ' + (current+1) + ' 题';
-      document.getElementById('q-text').textContent = q.text;
-      const pct = Math.round((current / 20) * 100);
-      document.getElementById('progress-label').textContent = '第 ' + (current+1) + ' 题，共 20 题';
-      document.getElementById('progress-pct').textContent = pct + '%';
-      document.getElementById('progress-fill').style.width = pct + '%';
-      const optsEl = document.getElementById('q-options');
-      optsEl.innerHTML = '';
-      q.opts.forEach((opt, i) => {
-        const btn = document.createElement('button');
-        btn.className = 'option-btn' + (answers[current] === i ? ' selected' : '');
-        btn.innerHTML = '<div class="option-circle"><div class="option-dot"></div></div><span>' + opt + '</span>';
-        btn.onclick = () => selectOpt(i);
-        optsEl.appendChild(btn);
-      });
-      document.getElementById('btn-prev').style.display = current === 0 ? 'none' : '';
-      document.getElementById('btn-next').disabled = answers[current] === null;
-      document.getElementById('btn-next').textContent = current === 19 ? '查看结果 →' : '下一题 →';
-    }
-
-    function selectOpt(i) {
-      answers[current] = i;
-      document.querySelectorAll('.option-btn').forEach((b, idx) => {
-        b.className = 'option-btn' + (idx === i ? ' selected' : '');
-      });
-      document.getElementById('btn-next').disabled = false;
-    }
-
-    function prevQ() { if (current > 0) { current--; renderQ(); } }
-    function nextQ() {
-      if (current < 19) { current++; renderQ(); }
-      else showResult();
-    }
-
-    function showResult() {
-      document.getElementById('quiz-screen').style.display = 'none';
-      const cats = ["治理架构", "温室气体核算", "目标设定", "减排行动", "信息披露"];
-      const catScores = {};
-      cats.forEach(c => catScores[c] = { total: 0, max: 0 });
-      questions.forEach((q, i) => {
-        const ans = answers[i] !== null ? answers[i] : 3;
-        catScores[q.cat].total += q.scores[ans];
-        catScores[q.cat].max += 4;
-      });
-      let totalScore = 0, totalMax = 0;
-      cats.forEach(c => { totalScore += catScores[c].total; totalMax += catScores[c].max; });
-      const pct = Math.round((totalScore / totalMax) * 100);
-
-      let level, levelColor, desc, recs;
-      if (pct >= 80) {
-        level = "领先级"; levelColor = "#0F6E56";
-        desc = "贵公司在SBTi准备程度方面处于行业领先水平，已建立较为完善的气候治理体系和减排行动框架，具备申请SBTi目标批准的良好基础。";
-        recs = [["加速推进", "完成SBTi官方提交并争取在12个月内获批"], ["深化供应链", "将范围3目标传导至核心供应商，建立协同减排机制"], ["引领披露", "发布TCFD对齐的气候财务报告，提升信息质量"]];
-      } else if (pct >= 60) {
-        level = "发展级"; levelColor = "#185FA5";
-        desc = "贵公司已建立基础的气候管理能力，但在部分关键维度仍有明显提升空间。建议系统补足短板，加快SBTi目标制定进程。";
-        recs = [["补强核算", "完善范围3温室气体盘查，提升数据覆盖率和质量"], ["制定路径", "启动符合1.5°C路径的量化减排目标设计"], ["强化治理", "将气候目标纳入高管KPI和董事会议程"]];
-      } else if (pct >= 40) {
-        level = "起步级"; levelColor = "#993C1D";
-        desc = "贵公司尚处于气候行动的早期探索阶段，建议优先完成基础设施建设，包括完整的碳核算体系和正式的治理架构。";
-        recs = [["建立基础", "优先完成范围1和2的GHG盘查并实施第三方验证"], ["确立治理", "设立气候/ESG委员会并明确高管责任分工"], ["签署承诺", "向SBTi提交承诺函，启动目标制定流程"]];
-      } else {
-        level = "预备级"; levelColor = "#854F0B";
-        desc = "建议贵公司将建立气候行动基础能力列为近期优先事项，从碳排放核算和内部意识提升开始系统推进。";
-        recs = [["意识提升", "开展全员气候意识培训，识别内部气候战略负责人"], ["启动盘查", "按照GHG Protocol标准，完成范围1和2的首次碳盘查"], ["了解框架", "深入学习SBTi标准要求，评估适用路径和时间表"]];
-      }
-
-      const dimBars = cats.map(c => {
-        const p = Math.round((catScores[c].total / catScores[c].max) * 100);
-        return `<div class="dim-card">
-          <div class="dim-name">${c}</div>
-          <div class="dim-bar-track"><div class="dim-bar-fill" style="width:${p}%; background:${catColors[c]};"></div></div>
-          <div class="dim-score" style="color:${catColors[c]}">${p}%</div>
-        </div>`;
-      }).join('');
-
-      const circumference = 2 * Math.PI * 55;
-      const offset = circumference * (1 - pct / 100);
-
-      const recItems = recs.map(([title, body], i) =>
-        `<div class="rec-item"><div class="rec-icon" style="background:${catBg[cats[i]]};color:${catColors[cats[i]]}">${i+1}</div>
-        <div class="rec-text"><strong>${title}</strong>：${body}</div></div>`
-      ).join('');
-
-      document.getElementById('result-screen').style.display = 'block';
-      document.getElementById('result-screen').innerHTML = `
-        <div class="result-wrap">
-          <div class="score-ring">
-            <svg viewBox="0 0 120 120" width="120" height="120">
-              <circle cx="60" cy="60" r="55" fill="none" stroke="var(--color-background-secondary)" stroke-width="8"/>
-              <circle cx="60" cy="60" r="55" fill="none" stroke="${levelColor}" stroke-width="8"
-                stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"
-                stroke-linecap="round" transform="rotate(-90 60 60)"/>
-            </svg>
-            <div class="score-text" style="color:${levelColor}">${pct}<span style="font-size:14px">%</span></div>
-          </div>
-          <div class="hero-badge" style="color:${levelColor};background:${Object.values(catBg)[cats.indexOf(cats[0])]}">${level}</div>
-          <div class="result-title" style="margin-top:0.75rem">${level} — SBTi准备度 ${pct}%</div>
-          <div class="result-subtitle">${desc}</div>
-          <div class="dim-grid">${dimBars}</div>
-          <div class="recommend-box">
-            <h3>优先行动建议</h3>
-            ${recItems}
-          </div>
-          <button class="btn-primary" onclick="restartQuiz()" style="margin-right:12px">重新评估</button>
-          <button class="btn-ghost" onclick="sendPrompt('根据我的SBTi评估结果（${level}，${pct}%），请详细介绍下一步的具体行动方案')">获取详细建议 ↗</button>
-        </div>`;
-    }
-
-    function restartQuiz() {
-      current = 0; answers = new Array(20).fill(null);
-      document.getElementById('result-screen').style.display = 'none';
-      document.getElementById('quiz-screen').style.display = 'block';
-      renderQ();
-    }
-
-    function sendPrompt(prompt) {
-      // 这里可以集成API调用，现在只是模拟
-      alert('提示：此功能需要集成API才能实现');
-    }
-  </script>
+    <script>
+        // 简单的导航菜单切换
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            // 这里可以添加移动端菜单的展开/收起逻辑
+            alert('移动端菜单功能开发中');
+        });
+    </script>
 </body>
 </html>
