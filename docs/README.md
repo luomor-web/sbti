@@ -23,6 +23,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 nvm install 20
 npm config set registry https://registry.npmmirror.com
 
+开发一个sbti人格测试网站
+
 winget --version
 git --version
 winget install --id Git.Git -e --source winget
