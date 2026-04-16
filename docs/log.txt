@@ -35,3 +35,28 @@ systemd=true
 [user]
 default=
 )
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 15916  100 15916    0     0  26005      0 --:--:-- --:--:-- --:--:-- 26049
+=> Downloading nvm from git to '/home/peterzhang/.nvm'
+=> Cloning into '/home/peterzhang/.nvm'...
+remote: Enumerating objects: 424, done.
+remote: Counting objects: 100% (424/424), done.
+remote: Compressing objects: 100% (351/351), done.
+remote: Total 424 (delta 59), reused 188 (delta 45), pack-reused 0 (from 0)
+Receiving objects: 100% (424/424), 414.13 KiB | 40.00 KiB/s, done.
+Resolving deltas: 100% (59/59), done.
+* (HEAD detached at FETCH_HEAD)
+  master
+=> Compressing and cleaning up git repository
+
+=> Appending nvm source string to /home/peterzhang/.bashrc
+=> Appending bash_completion source string to /home/peterzhang/.bashrc
+main: line 314: /mnt/d/dev/node-v14.21.3-win-x64/npm: cannot execute: required file not found
+=> Close and reopen your terminal to start using nvm or run the following to use it now:
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

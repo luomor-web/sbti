@@ -18,6 +18,15 @@ wsl --import Ubuntu E:\WSL\Ubuntu E:\WSL\Ubuntu.tar --version 2
 del E:\WSL\Ubuntu.tar
 wsl -d Ubuntu
 
+bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+
+winget --version
+git --version
+winget install --id Git.Git -e --source winget
+git --version
+where.exe git
+
 wsl --import <发行版名称> <安装目录> <镜像文件路径>
 wsl --import Ubuntu-24.04 "D:\WSL\Ubuntu-24.04" "E:\Edge Download\ubuntu-24.04.2-wsl-amd64.tar"
 
