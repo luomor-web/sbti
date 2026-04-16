@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBTI 人格测试</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-lightbulb-o text-indigo-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">SBTI 人格测试</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium">首页</a>
+                <a href="test.html" class="text-gray-600 hover:text-indigo-600 font-medium">开始测试</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium">关于测试</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium">联系我们</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-indigo-600">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero-section pt-20">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        了解你的人格特质<br>
+                        <span class="text-yellow-300">发现更好的自己</span>
+                    </h1>
+                    <p class="text-lg text-white/90 mb-8">
+                        SBTI 人格测试基于大五人格理论，帮助你深入了解自己的性格特点，为个人成长和职业规划提供参考。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="test.html" class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 shadow-lg">
+                            开始测试
+                        </a>
+                        <a href="#about" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition duration-300">
+                            了解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/1005/600/400" alt="人格测试" class="rounded-lg shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于测试 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">关于 SBTI 测试</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    SBTI (Student's Big Five Traits Inventory) 是基于大五人格理论开发的测试工具，专为学生群体设计。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">科学依据</h3>
+                    <p class="text-gray-600">
+                        基于大五人格理论，经过专业心理学家验证，测试结果具有较高的信度和效度。
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">快速便捷</h3>
+                    <p class="text-gray-600">
+                        只需10分钟即可完成测试，即时获得详细的人格分析报告。
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">个性化报告</h3>
+                    <p class="text-gray-600">
+                        根据你的回答生成个性化的人格分析报告，帮助你更好地了解自己。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 测试维度 -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">测试维度</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    SBTI 测试从五个维度评估你的人格特质
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-lightbulb-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">开放性</h3>
+                    <p class="text-gray-600 text-sm">
+                        对新经验、新思想的接受程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-check-circle text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">责任心</h3>
+                    <p class="text-gray-600 text-sm">
+                        组织性、可靠性和自律程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">外向性</h3>
+                    <p class="text-gray-600 text-sm">
+                        社交能力、活力和积极情绪
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">宜人性</h3>
+                    <p class="text-gray-600 text-sm">
+                        友善、合作和同理心程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">神经质</h3>
+                    <p class="text-gray-600 text-sm">
+                        情绪稳定性和压力反应
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行动号召 -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">准备好了解自己了吗？</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                开始 SBTI 人格测试，发现你的独特人格特质，为个人成长和职业规划提供参考。
+            </p>
+            <a href="test.html" class="bg-white text-indigo-600 font-bold py-4 px-8 rounded-lg hover:bg-indigo-50 transition duration-300 shadow-lg text-lg">
+                开始测试
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-lightbulb-o text-indigo-400 text-2xl"></i>
+                        <span class="text-xl font-bold">SBTI 人格测试</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        帮助学生了解自己的人格特质，为个人成长和职业规划提供参考。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="test.html" class="text-gray-400 hover:text-white">开始测试</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">关于测试</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div id="contact">
+                    <h3 class="text-lg font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="fa fa-envelope text-indigo-400"></i>
+                            <span class="text-gray-400">contact@sbtitest.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fa fa-phone text-indigo-400"></i>
+                            <span class="text-gray-400">123-4567-8910</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fa fa-map-marker text-indigo-400"></i>
+                            <span class="text-gray-400">北京市海淀区清华大学</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SBTI 人格测试. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的导航菜单切换
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            // 这里可以添加移动端菜单的展开/收起逻辑
+            alert('移动端菜单功能开发中');
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBTI 人格测试</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-lightbulb-o text-indigo-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">SBTI 人格测试</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium">首页</a>
+                <a href="test.html" class="text-gray-600 hover:text-indigo-600 font-medium">开始测试</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium">关于测试</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium">联系我们</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-indigo-600">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero-section pt-20">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        了解你的人格特质<br>
+                        <span class="text-yellow-300">发现更好的自己</span>
+                    </h1>
+                    <p class="text-lg text-white/90 mb-8">
+                        SBTI 人格测试基于大五人格理论，帮助你深入了解自己的性格特点，为个人成长和职业规划提供参考。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="test.html" class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 shadow-lg">
+                            开始测试
+                        </a>
+                        <a href="#about" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition duration-300">
+                            了解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/1005/600/400" alt="人格测试" class="rounded-lg shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于测试 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">关于 SBTI 测试</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    SBTI (Student's Big Five Traits Inventory) 是基于大五人格理论开发的测试工具，专为学生群体设计。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">科学依据</h3>
+                    <p class="text-gray-600">
+                        基于大五人格理论，经过专业心理学家验证，测试结果具有较高的信度和效度。
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">快速便捷</h3>
+                    <p class="text-gray-600">
+                        只需10分钟即可完成测试，即时获得详细的人格分析报告。
+                    </p>
+                </div>
+                
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">个性化报告</h3>
+                    <p class="text-gray-600">
+                        根据你的回答生成个性化的人格分析报告，帮助你更好地了解自己。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 测试维度 -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">测试维度</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    SBTI 测试从五个维度评估你的人格特质
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-lightbulb-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">开放性</h3>
+                    <p class="text-gray-600 text-sm">
+                        对新经验、新思想的接受程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-check-circle text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">责任心</h3>
+                    <p class="text-gray-600 text-sm">
+                        组织性、可靠性和自律程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">外向性</h3>
+                    <p class="text-gray-600 text-sm">
+                        社交能力、活力和积极情绪
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">宜人性</h3>
+                    <p class="text-gray-600 text-sm">
+                        友善、合作和同理心程度
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">神经质</h3>
+                    <p class="text-gray-600 text-sm">
+                        情绪稳定性和压力反应
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行动号召 -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">准备好了解自己了吗？</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                开始 SBTI 人格测试，发现你的独特人格特质，为个人成长和职业规划提供参考。
+            </p>
+            <a href="test.html" class="bg-white text-indigo-600 font-bold py-4 px-8 rounded-lg hover:bg-indigo-50 transition duration-300 shadow-lg text-lg">
+                开始测试
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-lightbulb-o text-indigo-400 text-2xl"></i>
+                        <span class="text-xl font-bold">SBTI 人格测试</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        帮助学生了解自己的人格特质，为个人成长和职业规划提供参考。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="test.html" class="text-gray-400 hover:text-white">开始测试</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">关于测试</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div id="contact">
+                    <h3 class="text-lg font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="fa fa-envelope text-indigo-400"></i>
+                            <span class="text-gray-400">contact@sbtitest.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fa fa-phone text-indigo-400"></i>
+                            <span class="text-gray-400">123-4567-8910</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fa fa-map-marker text-indigo-400"></i>
+                            <span class="text-gray-400">北京市海淀区清华大学</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SBTI 人格测试. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的导航菜单切换
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            // 这里可以添加移动端菜单的展开/收起逻辑
+            alert('移动端菜单功能开发中');
+        });
+    </script>
+</body>
+</html>
