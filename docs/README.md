@@ -11,6 +11,13 @@ wsl --list --online
 wsl --set-default Ubuntu
 bash
 
+wsl --list --verbose
+wsl --export Ubuntu E:\WSL\Ubuntu.tar
+wsl --unregister Ubuntu
+wsl --import Ubuntu E:\WSL\Ubuntu E:\WSL\Ubuntu.tar --version 2
+del E:\WSL\Ubuntu.tar
+wsl -d Ubuntu
+
 wsl --import <发行版名称> <安装目录> <镜像文件路径>
 wsl --import Ubuntu-24.04 "D:\WSL\Ubuntu-24.04" "E:\Edge Download\ubuntu-24.04.2-wsl-amd64.tar"
 
