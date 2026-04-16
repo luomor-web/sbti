@@ -1,331 +1,607 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SBTi 企业气候目标成熟度评估</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6096731848877113" crossorigin="anonymous"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3PX4SD5VDY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3PX4SD5VDY');
-</script>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?12a0d13963b589e9095ccecdd327f3fa";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-  <style>
-    :root {
-      --color-background-primary: #ffffff;
-      --color-background-secondary: #f8f9fa;
-      --color-background-info: #e6f1fb;
-      --color-text-primary: #212529;
-      --color-text-secondary: #6c757d;
-      --color-text-tertiary: #adb5bd;
-      --color-border-tertiary: #dee2e6;
-      --color-border-secondary: #ced4da;
-      --border-radius-lg: 8px;
-      --border-radius-md: 4px;
-    }
-    
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Noto Sans SC', sans-serif; background-color: var(--color-background-primary); color: var(--color-text-primary); }
-    .sbti-wrap { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem; }
-    .hero { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 0.5px solid var(--color-border-tertiary); margin-bottom: 2rem; }
-    .hero-badge { display: inline-block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-info); background: var(--color-background-info); border-radius: 20px; padding: 4px 14px; margin-bottom: 1rem; }
-    .hero h1 { font-family: 'Noto Serif SC', serif; font-size: 28px; font-weight: 700; color: var(--color-text-primary); line-height: 1.3; margin-bottom: 0.5rem; }
-    .hero p { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; max-width: 520px; margin: 0 auto; }
-    .progress-bar-wrap { margin-bottom: 2rem; }
-    .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .progress-label { font-size: 12px; color: var(--color-text-secondary); }
-    .progress-track { height: 4px; background: var(--color-background-secondary); border-radius: 2px; overflow: hidden; }
-    .progress-fill { height: 100%; background: #185FA5; border-radius: 2px; transition: width 0.4s ease; }
-    .category-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; background: var(--color-background-secondary); color: var(--color-text-secondary); margin-bottom: 1rem; border: 0.5px solid var(--color-border-tertiary); }
-    .question-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .question-num { font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 0.5rem; }
-    .question-text { font-size: 15px; font-weight: 500; color: var(--color-text-primary); line-height: 1.6; margin-bottom: 1.25rem; }
-    .options { display: flex; flex-direction: column; gap: 8px; }
-    .option-btn { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); background: transparent; cursor: pointer; text-align: left; font-family: 'Noto Sans SC', sans-serif; font-size: 13px; color: var(--color-text-primary); transition: all 0.15s; }
-    .option-btn:hover { background: var(--color-background-secondary); border-color: var(--color-border-secondary); }
-    .option-btn.selected { border-color: #185FA5; background: #E6F1FB; color: #185FA5; }
-    .option-circle { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--color-border-secondary); flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
-    .option-btn.selected .option-circle { background: #185FA5; border-color: #185FA5; }
-    .option-dot { width: 8px; height: 8px; border-radius: 50%; background: white; display: none; }
-    .option-btn.selected .option-dot { display: block; }
-    .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; }
-    .btn-ghost { background: transparent; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); padding: 9px 20px; font-size: 13px; font-family: 'Noto Sans SC', sans-serif; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
-    .btn-ghost:hover { background: var(--color-background-secondary); }
-    .btn-primary { background: #185FA5; border: none; border-radius: var(--border-radius-md); padding: 10px 24px; font-size: 13px; font-family: 'Noto Sans SC', sans-serif; color: white; cursor: pointer; transition: all 0.15s; font-weight: 500; }
-    .btn-primary:hover { background: #0C447C; }
-    .btn-primary:disabled { background: var(--color-background-secondary); color: var(--color-text-tertiary); cursor: not-allowed; }
-    .result-wrap { text-align: center; padding: 2rem 0; }
-    .score-ring { width: 120px; height: 120px; margin: 0 auto 1.5rem; position: relative; }
-    .score-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28px; font-weight: 700; color: var(--color-text-primary); }
-    .score-label-sm { font-size: 11px; color: var(--color-text-secondary); }
-    .result-title { font-family: 'Noto Serif SC', serif; font-size: 22px; font-weight: 700; margin-bottom: 0.5rem; }
-    .result-subtitle { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 2rem; line-height: 1.7; max-width: 480px; margin-left: auto; margin-right: auto; }
-    .dim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 2rem; }
-    .dim-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: left; }
-    .dim-name { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 6px; }
-    .dim-bar-track { height: 6px; background: var(--color-background-primary); border-radius: 3px; margin-bottom: 6px; overflow: hidden; }
-    .dim-bar-fill { height: 100%; border-radius: 3px; }
-    .dim-score { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
-    .recommend-box { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem 1.5rem; text-align: left; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .recommend-box h3 { font-size: 14px; font-weight: 500; margin-bottom: 0.75rem; color: var(--color-text-primary); }
-    .rec-item { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
-    .rec-item:last-child { border-bottom: none; }
-    .rec-icon { width: 24px; height: 24px; border-radius: 6px; background: var(--color-background-info); color: var(--color-text-info); font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-weight: 500; }
-    .rec-text { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
-    .rec-text strong { color: var(--color-text-primary); font-weight: 500; }
-    .start-wrap { max-width: 520px; margin: 0 auto; }
-    .info-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 1.5rem 0 2rem; }
-    .info-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center; }
-    .info-card .num { font-size: 20px; font-weight: 500; color: var(--color-text-primary); }
-    .info-card .lbl { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 2rem; }
-    .tag { font-size: 11px; padding: 4px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
-    
-    /* 响应式设计 */
-    @media (max-width: 768px) {
-      .sbti-wrap { padding: 1rem; }
-      .hero h1 { font-size: 24px; }
-      .dim-grid { grid-template-columns: 1fr; }
-      .info-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SBTI - 可持续商业与转型倡议，致力于推动企业实现可持续发展目标">
+    <meta name="keywords" content="SBTI, 可持续发展, 商业转型, 碳减排, 环境目标">
+    <meta name="author" content="SBTI Team">
+    <title>SBTI - 可持续商业与转型倡议</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f9f9f9;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: var(--light-color) !important;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .features {
+            background-color: white;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .testimonials {
+            background-color: #f8f9fa;
+        }
+        
+        .testimonial-item {
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer h3 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="sbti-wrap">
-    <div class="hero">
-      <div class="hero-badge">SBTi 科学碳目标倡议</div>
-      <h1>企业气候目标成熟度评估</h1>
-      <p>基于 SBTi 框架，评估贵公司在气候行动、减排路径和目标设定方面的准备程度</p>
-    </div>
-
-    <div id="start-screen">
-      <div class="start-wrap">
-        <div class="info-grid">
-          <div class="info-card"><div class="num">20</div><div class="lbl">评估题目</div></div>
-          <div class="info-card"><div class="num">5</div><div class="lbl">核心维度</div></div>
-          <div class="info-card"><div class="num">~8min</div><div class="lbl">预计时长</div></div>
-        </div>
-        <div class="tag-list">
-          <span class="tag">治理架构</span>
-          <span class="tag">温室气体核算</span>
-          <span class="tag">目标设定</span>
-          <span class="tag">减排行动</span>
-          <span class="tag">信息披露</span>
-        </div>
-        <div style="text-align:center">
-          <button class="btn-primary" onclick="startQuiz()" style="padding: 12px 40px; font-size: 14px;">开始评估</button>
-        </div>
-      </div>
-    </div>
-
-    <div id="quiz-screen" style="display:none">
-      <div class="progress-bar-wrap">
-        <div class="progress-header">
-          <span class="progress-label" id="progress-label">第 1 题，共 20 题</span>
-          <span class="progress-label" id="progress-pct">0%</span>
-        </div>
-        <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
-      </div>
-      <div class="question-card">
-        <div class="category-tag" id="q-category"></div>
-        <div class="question-num" id="q-num"></div>
-        <div class="question-text" id="q-text"></div>
-        <div class="options" id="q-options"></div>
-      </div>
-      <div class="nav-row">
-        <button class="btn-ghost" id="btn-prev" onclick="prevQ()">← 上一题</button>
-        <button class="btn-primary" id="btn-next" onclick="nextQ()" disabled>下一题 →</button>
-      </div>
-    </div>
-
-    <div id="result-screen" style="display:none"></div>
-  </div>
-
-  <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 @烙馍网 保留所有权利.</p> <a id="bei-an" href="https://beian.miit.gov.cn/" target="_blank">京ICP备16044936号-1</a>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SBTI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">服务</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">客户评价</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">联系我们</a>
+                    </li>
+                </ul>
             </div>
         </div>
-  </footer>
+    </nav>
 
-  <script>
-  const questions = [
-    { cat: "治理架构", text: "贵公司是否在董事会层面设有专门负责气候/ESG议题的委员会或职位？", opts: ["是，设有独立委员会且有明确授权", "是，但职责较为分散或非正式", "正在筹备建立中", "目前尚未建立"], scores: [4,3,2,1] },
-    { cat: "治理架构", text: "气候相关目标是否与高管薪酬激励机制挂钩？", opts: ["是，已明确量化并与绩效强挂钩", "部分挂钩，指标较模糊", "正在研究设计中", "尚未建立连接"], scores: [4,3,2,1] },
-    { cat: "治理架构", text: "贵公司是否制定了正式的气候变化应对政策文件？", opts: ["是，已公开发布且定期更新", "有内部政策文件但未公开", "草案阶段，尚未正式发布", "暂无相关政策文件"], scores: [4,3,2,1] },
-    { cat: "治理架构", text: "气候风险是否被纳入公司整体风险管理框架？", opts: ["是，参照TCFD框架全面整合", "部分纳入，缺乏系统化", "正在开展差距分析", "尚未整合"], scores: [4,3,2,1] },
-    { cat: "温室气体核算", text: "贵公司是否开展了完整的温室气体盘查（范围1、2、3）？", opts: ["是，覆盖全部三个范围，经过第三方验证", "已完成范围1和2，范围3部分覆盖", "仅完成范围1和2", "尚未开展系统性盘查"], scores: [4,3,2,1] },
-    { cat: "温室气体核算", text: "贵公司采用何种温室气体核算标准？", opts: ["GHG Protocol企业标准（含范围2指南）", "行业特定标准或地方标准", "自行制定的内部方法", "尚无明确核算标准"], scores: [4,3,2,1] },
-    { cat: "温室气体核算", text: "贵公司供应链（范围3）温室气体数据的覆盖程度如何？", opts: ["覆盖15个以上范围3类别，数据质量高", "覆盖主要类别（占比>40%）", "仅覆盖1-2个关键类别", "尚未启动范围3核算"], scores: [4,3,2,1] },
-    { cat: "目标设定", text: "贵公司是否已提交或承诺提交SBTi目标？", opts: ["已获SBTi官方批准的科学碳目标", "已提交SBTi审核中", "已签署承诺函（Commitment Letter）", "尚未开始SBTi申请流程"], scores: [4,3,2,1] },
-    { cat: "目标设定", text: "贵公司近期减排目标（2030年前）对应哪种减排路径？", opts: ["1.5°C路径（年均减排4.2%以上）", "2°C路径（年均减排2.5%以上）", "有量化目标但路径未明确", "仅有定性承诺，无量化目标"], scores: [4,3,2,1] },
-    { cat: "目标设定", text: "贵公司是否设定了长期净零目标？", opts: ["2050年前实现净零，含明确的中间里程碑", "有净零承诺但路径不清晰", "正在制定中", "尚未设定净零目标"], scores: [4,3,2,1] },
-    { cat: "目标设定", text: "贵公司目标是否覆盖供应链减排？", opts: ["范围3目标覆盖67%以上采购和使用排放", "有范围3目标但覆盖率不足67%", "正在评估和制定中", "目标仅涵盖范围1和2"], scores: [4,3,2,1] },
-    { cat: "减排行动", text: "贵公司在可再生能源使用方面的进展如何？", opts: ["可再生能源占比已超80%，或已签署RE100", "可再生能源占比30%-80%", "已启动可再生能源项目（占比<30%）", "尚未系统推进可再生能源转型"], scores: [4,3,2,1] },
-    { cat: "减排行动", text: "贵公司是否制定了详细的减排行动计划（含预算和时间表）？", opts: ["有全面的行动计划，已纳入年度预算", "有初步计划，资源配置尚不明确", "正在开展减排路径规划", "尚无系统性减排行动计划"], scores: [4,3,2,1] },
-    { cat: "减排行动", text: "贵公司如何处理无法直接减排的剩余碳排放？", opts: ["优先内部减排，仅对剩余量使用高质量碳移除", "使用碳信用额度但质量参差", "主要依赖碳信用抵消而非实质减排", "尚未制定相关策略"], scores: [4,3,2,1] },
-    { cat: "减排行动", text: "贵公司是否向供应商传导气候行动要求？", opts: ["已向主要供应商提出明确的减排要求及时间节点", "正在开展供应商能力建设和意识提升", "偶尔在采购评估中涉及气候因素", "供应商管理中尚未纳入气候要求"], scores: [4,3,2,1] },
-    { cat: "信息披露", text: "贵公司以何种方式披露气候相关信息？", opts: ["年度TCFD报告+CDP披露+ESG报告，经第三方鉴证", "发布ESG报告，部分参照TCFD框架", "仅有基础的可持续发展信息披露", "尚无系统性气候信息披露"], scores: [4,3,2,1] },
-    { cat: "信息披露", text: "贵公司温室气体数据是否经过第三方鉴证？", opts: ["是，经有资质机构有限保证或合理保证鉴证", "正在安排首次第三方鉴证", "仅进行内部审核", "尚未开展任何形式的鉴证"], scores: [4,3,2,1] },
-    { cat: "信息披露", text: "贵公司是否披露了气候相关的财务风险和机遇？", opts: ["按TCFD框架全面披露，含情景分析", "定性描述了主要气候风险", "仅提及气候相关的合规风险", "暂未披露气候财务影响"], scores: [4,3,2,1] },
-    { cat: "信息披露", text: "贵公司是否定期追踪并公开报告目标达成进展？", opts: ["每年公开发布带有数据对比的进展报告", "内部定期追踪，对外披露有限", "有追踪机制但报告频率不固定", "尚未建立系统性进展追踪机制"], scores: [4,3,2,1] },
-    { cat: "信息披露", text: "贵公司气候目标和行动是否与国家/行业减排路径保持一致？", opts: ["明确对标国家NDC或行业SBT路径", "参考了主要国际气候协议", "一致性分析仍在进行中", "尚未评估一致性"], scores: [4,3,2,1] }
-  ];
-
-  const catColors = { "治理架构": "#185FA5", "温室气体核算": "#0F6E56", "目标设定": "#993C1D", "减排行动": "#3B6D11", "信息披露": "#854F0B" };
-  const catBg = { "治理架构": "#E6F1FB", "温室气体核算": "#E1F5EE", "目标设定": "#FAECE7", "减排行动": "#EAF3DE", "信息披露": "#FAEEDA" };
-
-  let current = 0;
-  let answers = new Array(20).fill(null);
-
-  function startQuiz() {
-    document.getElementById('start-screen').style.display = 'none';
-    document.getElementById('quiz-screen').style.display = 'block';
-    renderQ();
-  }
-
-  function renderQ() {
-    const q = questions[current];
-    document.getElementById('q-category').textContent = q.cat;
-    document.getElementById('q-category').style.background = catBg[q.cat];
-    document.getElementById('q-category').style.color = catColors[q.cat];
-    document.getElementById('q-category').style.borderColor = catColors[q.cat] + '44';
-    document.getElementById('q-num').textContent = '第 ' + (current+1) + ' 题';
-    document.getElementById('q-text').textContent = q.text;
-    const pct = Math.round((current / 20) * 100);
-    document.getElementById('progress-label').textContent = '第 ' + (current+1) + ' 题，共 20 题';
-    document.getElementById('progress-pct').textContent = pct + '%';
-    document.getElementById('progress-fill').style.width = pct + '%';
-    const optsEl = document.getElementById('q-options');
-    optsEl.innerHTML = '';
-    q.opts.forEach((opt, i) => {
-      const btn = document.createElement('button');
-      btn.className = 'option-btn' + (answers[current] === i ? ' selected' : '');
-      btn.innerHTML = '<div class="option-circle"><div class="option-dot"></div></div><span>' + opt + '</span>';
-      btn.onclick = () => selectOpt(i);
-      optsEl.appendChild(btn);
-    });
-    document.getElementById('btn-prev').style.display = current === 0 ? 'none' : '';
-    document.getElementById('btn-next').disabled = answers[current] === null;
-    document.getElementById('btn-next').textContent = current === 19 ? '查看结果 →' : '下一题 →';
-  }
-
-  function selectOpt(i) {
-    answers[current] = i;
-    document.querySelectorAll('.option-btn').forEach((b, idx) => {
-      b.className = 'option-btn' + (idx === i ? ' selected' : '');
-    });
-    document.getElementById('btn-next').disabled = false;
-  }
-
-  function prevQ() { if (current > 0) { current--; renderQ(); } }
-  function nextQ() {
-    if (current < 19) { current++; renderQ(); }
-    else showResult();
-  }
-
-  function showResult() {
-    document.getElementById('quiz-screen').style.display = 'none';
-    const cats = ["治理架构", "温室气体核算", "目标设定", "减排行动", "信息披露"];
-    const catScores = {};
-    cats.forEach(c => catScores[c] = { total: 0, max: 0 });
-    questions.forEach((q, i) => {
-      const ans = answers[i] !== null ? answers[i] : 3;
-      catScores[q.cat].total += q.scores[ans];
-      catScores[q.cat].max += 4;
-    });
-    let totalScore = 0, totalMax = 0;
-    cats.forEach(c => { totalScore += catScores[c].total; totalMax += catScores[c].max; });
-    const pct = Math.round((totalScore / totalMax) * 100);
-
-    let level, levelColor, desc, recs;
-    if (pct >= 80) {
-      level = "领先级"; levelColor = "#0F6E56";
-      desc = "贵公司在SBTi准备程度方面处于行业领先水平，已建立较为完善的气候治理体系和减排行动框架，具备申请SBTi目标批准的良好基础。";
-      recs = [["加速推进", "完成SBTi官方提交并争取在12个月内获批"], ["深化供应链", "将范围3目标传导至核心供应商，建立协同减排机制"], ["引领披露", "发布TCFD对齐的气候财务报告，提升信息质量"]];
-    } else if (pct >= 60) {
-      level = "发展级"; levelColor = "#185FA5";
-      desc = "贵公司已建立基础的气候管理能力，但在部分关键维度仍有明显提升空间。建议系统补足短板，加快SBTi目标制定进程。";
-      recs = [["补强核算", "完善范围3温室气体盘查，提升数据覆盖率和质量"], ["制定路径", "启动符合1.5°C路径的量化减排目标设计"], ["强化治理", "将气候目标纳入高管KPI和董事会议程"]];
-    } else if (pct >= 40) {
-      level = "起步级"; levelColor = "#993C1D";
-      desc = "贵公司尚处于气候行动的早期探索阶段，建议优先完成基础设施建设，包括完整的碳核算体系和正式的治理架构。";
-      recs = [["建立基础", "优先完成范围1和2的GHG盘查并实施第三方验证"], ["确立治理", "设立气候/ESG委员会并明确高管责任分工"], ["签署承诺", "向SBTi提交承诺函，启动目标制定流程"]];
-    } else {
-      level = "预备级"; levelColor = "#854F0B";
-      desc = "建议贵公司将建立气候行动基础能力列为近期优先事项，从碳排放核算和内部意识提升开始系统推进。";
-      recs = [["意识提升", "开展全员气候意识培训，识别内部气候战略负责人"], ["启动盘查", "按照GHG Protocol标准，完成范围1和2的首次碳盘查"], ["了解框架", "深入学习SBTi标准要求，评估适用路径和时间表"]];
-    }
-
-    const dimBars = cats.map(c => {
-      const p = Math.round((catScores[c].total / catScores[c].max) * 100);
-      return `<div class="dim-card">
-        <div class="dim-name">${c}</div>
-        <div class="dim-bar-track"><div class="dim-bar-fill" style="width:${p}%; background:${catColors[c]};"></div></div>
-        <div class="dim-score" style="color:${catColors[c]}">${p}%</div>
-      </div>`;
-    }).join('');
-
-    const circumference = 2 * Math.PI * 50;
-    const offset = circumference * (1 - pct / 100);
-
-    const recItems = recs.map(([title, body], i) =>
-      `<div class="rec-item"><div class="rec-icon" style="background:${catBg[cats[i]]};color:${catColors[cats[i]]}">${i+1}</div>
-      <div class="rec-text"><strong>${title}</strong>：${body}</div></div>`
-    ).join('');
-
-    document.getElementById('result-screen').style.display = 'block';
-    document.getElementById('result-screen').innerHTML = `
-      <div class="result-wrap">
-        <div class="score-ring">
-          <svg viewBox="0 0 120 120" width="120" height="120">
-            <circle cx="60" cy="60" r="50" fill="none" stroke="var(--color-background-secondary)" stroke-width="10"/>
-            <circle cx="60" cy="60" r="50" fill="none" stroke="${levelColor}" stroke-width="10"
-              stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"
-              stroke-linecap="round" transform="rotate(-90 60 60)"/>
-          </svg>
-          <div class="score-text" style="color:${levelColor}">${pct}<span style="font-size:13px">%</span></div>
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>可持续商业与转型倡议</h1>
+            <p>我们致力于帮助企业设定科学的碳减排目标，推动全球可持续发展，共创更美好的未来。</p>
+            <a href="#services" class="btn btn-primary">了解更多</a>
         </div>
-        <div class="hero-badge" style="color:${levelColor};background:${Object.values(catBg)[cats.indexOf(cats[0])]}">${level}</div>
-        <div class="result-title" style="margin-top:0.75rem">${level} — SBTi准备度 ${pct}%</div>
-        <div class="result-subtitle">${desc}</div>
-        <div class="dim-grid">${dimBars}</div>
-        <div class="recommend-box">
-          <h3>优先行动建议</h3>
-          ${recItems}
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于 SBTI</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>我们的使命</h3>
+                    <p>SBTI（可持续商业与转型倡议）是一个全球性的合作平台，致力于帮助企业设定科学的碳减排目标，推动经济向低碳转型。我们相信，通过科学的方法和集体的努力，我们可以实现全球气候目标，创造一个更可持续的未来。</p>
+                    <p>我们的工作重点包括：设定科学碳目标、推动企业转型、提供专业支持和建立合作伙伴关系。</p>
+                    <ul class="mt-4">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 科学碳目标设定</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 企业可持续发展咨询</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 行业最佳实践分享</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success"></i> 全球合作伙伴网络</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://picsum.photos/id/119/600/400" alt="SBTI 团队" class="img-fluid rounded-lg shadow-lg">
+                </div>
+            </div>
         </div>
-        <button class="btn-primary" onclick="restartQuiz()" style="margin-right:12px">重新评估</button>
-        <button class="btn-ghost" onclick="sendPrompt('根据我的SBTi评估结果（${level}，${pct}%），请详细介绍下一步的具体行动方案')">获取详细建议 ↗</button>
-      </div>`;
-  }
+    </section>
 
-  function restartQuiz() {
-    current = 0; answers = new Array(20).fill(null);
-    document.getElementById('result-screen').style.display = 'none';
-    document.getElementById('quiz-screen').style.display = 'block';
-    renderQ();
-  }
+    <!-- 服务 -->
+    <section id="services" class="section features">
+        <div class="container">
+            <div class="section-title">
+                <h2>我们的服务</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/26/600/400" class="card-img-top" alt="科学碳目标设定">
+                        <div class="card-body">
+                            <h5 class="card-title">科学碳目标设定</h5>
+                            <p class="card-text">帮助企业根据最新的气候科学，设定符合《巴黎协定》目标的碳减排目标，确保企业的减排努力与全球气候行动保持一致。</p>
+                            <a href="#" class="btn btn-outline-primary">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/42/600/400" class="card-img-top" alt="可持续发展咨询">
+                        <div class="card-body">
+                            <h5 class="card-title">可持续发展咨询</h5>
+                            <p class="card-text">提供全面的可持续发展咨询服务，包括碳足迹评估、ESG报告编制、可持续发展战略制定等，帮助企业实现长期可持续发展。</p>
+                            <a href="#" class="btn btn-outline-primary">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/id/96/600/400" class="card-img-top" alt="能力建设">
+                        <div class="card-body">
+                            <h5 class="card-title">能力建设</h5>
+                            <p class="card-text">通过培训、工作坊和知识分享活动，提升企业在可持续发展领域的能力，培养专业人才，推动行业整体水平提升。</p>
+                            <a href="#" class="btn btn-outline-primary">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  function sendPrompt(prompt) {
-    // 这里可以集成API调用，现在只是模拟
-    alert('提示：此功能需要集成API才能实现');
-  }
-  </script>
+    <!-- 特色 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>我们的特色</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>全球视角</h3>
+                        <p>基于全球最佳实践和最新气候科学，为企业提供国际化的解决方案。</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>科学方法</h3>
+                        <p>采用科学的方法和工具，确保企业的碳目标设定和减排计划具有可信度和可行性。</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>合作网络</h3>
+                        <p>拥有广泛的全球合作伙伴网络，为企业提供全方位的支持和资源。</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>创新解决方案</h3>
+                        <p>不断探索和开发创新的可持续发展解决方案，帮助企业应对挑战。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客户评价 -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>客户评价</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">
+                            "SBTI的专业团队帮助我们设定了科学的碳减排目标，为我们的可持续发展战略提供了清晰的方向。他们的专业知识和支持让我们在可持续发展道路上走得更加自信。"
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>张总</strong>，某科技公司CEO
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">
+                            "通过与SBTI的合作，我们不仅成功设定了碳目标，还建立了完善的可持续发展管理体系。这不仅提升了我们的企业形象，也为我们创造了新的商业机会。"
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>李总</strong>，某制造企业总经理
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">
+                            "SBTI的团队非常专业，他们提供的培训和咨询服务让我们的团队对可持续发展有了更深入的理解，为我们的企业转型提供了有力支持。"
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>王总</strong>，某金融机构可持续发展总监
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我们</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">姓名</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">邮箱</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">主题</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">留言</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h3>联系方式</h3>
+                    <p>如果您对我们的服务有任何疑问，欢迎随时联系我们。我们的团队将竭诚为您提供专业的支持和服务。</p>
+                    <ul class="mt-4">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt text-secondary me-3"></i>
+                            <span>北京市海淀区清华大学x-lab</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone text-secondary me-3"></i>
+                            <span>+86 10 8888 8888</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope text-secondary me-3"></i>
+                            <span>contact@sbti.org</span>
+                        </li>
+                    </ul>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3>SBTI</h3>
+                    <p>可持续商业与转型倡议，致力于推动企业实现可持续发展目标，共同应对全球气候变化挑战。</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#services">服务</a></li>
+                        <li><a href="#testimonials">客户评价</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>服务</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">科学碳目标设定</a></li>
+                        <li><a href="#">可持续发展咨询</a></li>
+                        <li><a href="#">能力建设</a></li>
+                        <li><a href="#">ESG报告编制</a></li>
+                        <li><a href="#">碳足迹评估</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>联系我们</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 北京市海淀区清华大学x-lab</li>
+                        <li><i class="fas fa-phone me-2"></i> +86 10 8888 8888</li>
+                        <li><i class="fas fa-envelope me-2"></i> contact@sbti.org</li>
+                    </ul>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 SBTI. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                navbar.style.backgroundColor = 'var(--primary-color)';
+            }
+        });
+
+        // 表单提交处理
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('表单提交成功！我们会尽快与您联系。');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
