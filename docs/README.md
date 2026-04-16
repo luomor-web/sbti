@@ -26,6 +26,8 @@ npm config set registry https://registry.npmmirror.com
 开发一个sbti人格测试网站
 完成seo优化
 
+重构页面，美化页面，seo优化​
+
 winget --version
 git --version
 winget install --id Git.Git -e --source winget
