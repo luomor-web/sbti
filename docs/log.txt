@@ -60,3 +60,12 @@ main: line 314: /mnt/d/dev/node-v14.21.3-win-x64/npm: cannot execute: required f
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+vm install 20
+Downloading and installing node v20.20.2...
+Downloading https://nodejs.org/dist/v20.20.2/node-v20.20.2-linux-x64.tar.xz...
+################################################################################################################# 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v20.20.2 (npm v10.8.2)
+Creating default alias: default -> 20 (-> v20.20.2)
